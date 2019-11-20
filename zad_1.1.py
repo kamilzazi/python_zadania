@@ -17,4 +17,4 @@ if ziemniaki_cena * ziemniaki_waga > banany_cena * banany_waga:
 elif ziemniaki_cena * ziemniaki_waga == banany_cena * banany_waga:
     print('Za ziemniaki i banany trzeba zapłacić taką samą kwotę.')
 else:
-    print('Za banany trzeba zapłacić więcej.')
+    print('Za banany trzeba zapłacić więcej. ')
