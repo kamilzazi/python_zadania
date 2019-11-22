@@ -6,6 +6,7 @@ oraz podsumowanie informujące o stanie/zaleceniach. (Informacje o BMI: wzór, i
 Programy mają różnić się sposobem interakcji z użytkownikiem.
 """
 
+# PROGRAM 1
 wzrost = float(input('Podaj swój wzrost w cm: '))
 waga = float(input('Podaj swoją wagę w kg: '))
 
@@ -20,3 +21,5 @@ elif 25 <= BMI < 30:
     print("Masz nadwagę.")
 else:
     print("Twój wskaźnik BMI wskazuje otyłość.")
+
+# PROGRAM 2

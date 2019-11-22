@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Kraków zadania/1_podstawy_pgg/.idea/1_podstawy_pgg.iml" filepath="$PROJECT_DIR$/../Kraków zadania/1_podstawy_pgg/.idea/1_podstawy_pgg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Kraków zadania/2_kolekcje_pgg/.idea/2_kolekcje_pgg.iml" filepath="$PROJECT_DIR$/../Kraków zadania/2_kolekcje_pgg/.idea/2_kolekcje_pgg.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/python_zadania.iml" filepath="$PROJECT_DIR$/.idea/python_zadania.iml" />
     </modules>
   </component>
