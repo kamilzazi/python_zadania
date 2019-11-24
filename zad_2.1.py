@@ -39,7 +39,5 @@ print(f'Pierwsza liczba {a}')
 print(f'Druga liczba {b}')
 
 while a + b != int(input(f'Podaj sumę liczb {a} i {b}: ')):
-    if False:
-        pass
-    else:
-        print('Podaj dobry wynik.')
+    print('Podaj dobry wynik.')
+print('Zgadłeś!')
