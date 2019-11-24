@@ -13,12 +13,28 @@ Na tej podstawie i powyższych założeń policz ile zapłaci za bilety, które 
 wiek = int(input('Ile masz lat? '))
 
 if 0 <= wiek <= 6:
-    print('Bilety są darmowe.')
+    a = 0
 else:
     ile_biletow = float(input('Ile biletów chcesz kupić? '))
     if 7 <= wiek <= 17:
-        print(f'Za bilety musisz zapłacić {ile_biletow * 2.28} zł. ')
+        a = ile_biletow * 2.28
     elif 18 <= wiek <= 64:
-        print(f'Za bilety musisz zapłacić {ile_biletow * 3.80} zł. ')
+        a = ile_biletow * 3.80
     else:
-        print(f'Za bilety musisz zapłacić {ile_biletow * 1.90} zł. ')
+        a = ile_biletow * 1.90
+print(f'Za bilety musisz zapłacić {a} zł. ')
+
+
+
+# wiek = int(input('Ile masz lat? '))
+#
+# if 0 <= wiek <= 6:
+#     print('Bilety są darmowe.')
+# else:
+#     ile_biletow = float(input('Ile biletów chcesz kupić? '))
+#     if 7 <= wiek <= 17:
+#         print(f'Za bilety musisz zapłacić {ile_biletow * 2.28} zł. ')
+#     elif 18 <= wiek <= 64:
+#         print(f'Za bilety musisz zapłacić {ile_biletow * 3.80} zł. ')
+#     else:
+#         print(f'Za bilety musisz zapłacić {ile_biletow * 1.90} zł. ')
