@@ -4,7 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Kraków zadania/1_podstawy_pgg/.idea/1_podstawy_pgg.iml" filepath="$PROJECT_DIR$/../Kraków zadania/1_podstawy_pgg/.idea/1_podstawy_pgg.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Kraków zadania/2_kolekcje_pgg/.idea/2_kolekcje_pgg.iml" filepath="$PROJECT_DIR$/../Kraków zadania/2_kolekcje_pgg/.idea/2_kolekcje_pgg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../krakow_zadania_pgg/.idea/krakow_zadania_pgg.iml" filepath="$PROJECT_DIR$/../krakow_zadania_pgg/.idea/krakow_zadania_pgg.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/python_zadania.iml" filepath="$PROJECT_DIR$/.idea/python_zadania.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../zadania_różne/.idea/zadania_ze_zjazdow_dom.iml" filepath="$PROJECT_DIR$/../zadania_różne/.idea/zadania_ze_zjazdow_dom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../zadania_ze_zjazdow_w_domu/.idea/zadania_ze_zjazdow_w_domu.iml" filepath="$PROJECT_DIR$/../zadania_ze_zjazdow_w_domu/.idea/zadania_ze_zjazdow_w_domu.iml" />
     </modules>
   </component>
 </project>

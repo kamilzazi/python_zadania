@@ -8,14 +8,29 @@ Np. dla parametru 3 powinno się wypisać:
 * * * * *
 ```
 """
+
+
+# licznik = int(0)
+# x = int(input('Podaj liczbę całkowitą: '))
+# gwiazda = '* '
+# gwiazdka = '* '
+# while licznik != x:
+#     wyrownanie = x ** 3
+#     print(f'{gwiazdka}'.center(wyrownanie), end='')
+#     gwiazdka = gwiazdka + 2 * gwiazda
+#     licznik += 1
+#     print()
+
+
+
+
+
 licznik = int(0)
 x = int(input('Podaj liczbę całkowitą: '))
 gwiazda = '* '
 gwiazdka = '* '
 while licznik != x:
-    wyrownanie = x ** 3
-    print(f'{gwiazdka}'.center(wyrownanie), end='')
+    print(f'{gwiazdka:^40}', end='')
     gwiazdka = gwiazdka + 2 * gwiazda
     licznik += 1
     print()
-
