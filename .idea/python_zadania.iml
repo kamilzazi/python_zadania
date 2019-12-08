@@ -9,6 +9,7 @@
     <orderEntry type="module" module-name="zadania_ze_zjazdow_dom" />
     <orderEntry type="module" module-name="zadania_ze_zjazdow_w_domu" />
     <orderEntry type="module" module-name="krakow_zadania_pgg" />
+    <orderEntry type="module" module-name="3_funkcje" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />
