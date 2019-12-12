@@ -54,9 +54,9 @@ def ile_dni(miesiac_uzytkownika: str) -> int:
 
 def wrapper(mies):
     if mies['miesiac1'] != 'luty':
-        print(f"{mies['miesiac1']} ma {mies['dni']} dni.")
+        print(f"{mies['miesiac1'].capitalize()} ma {mies['dni']} dni.")
     else:
-        print(f'{mies["miesiac1"]} w {mies["w_ktorym_roku"]} roku ma {mies["dni"]} dni.')
+        print(f'{mies["miesiac1"].capitalize()} w {mies["w_ktorym_roku"]} roku ma {mies["dni"]} dni.')
 
 
 miesiac_uzytkownika = input("Podaj miesiac: ")
