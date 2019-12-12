@@ -50,8 +50,8 @@ def test_liczb_nieujemnych():
 # 2. `max` - zwraca większą z dwóch liczb,###################################################################
 def maks(liczba1: int or float, liczba2: int or float) -> int or float:
     """Zwraca większą z dwóch liczb
-    :param liczba1
-    :param liczba2
+    :param liczba1:
+    :param liczba2:
     :return:
     """
     if type(liczba1) is not int and type(liczba1) is not float \
@@ -88,8 +88,8 @@ def test_liczb_prawidlowych():
 # 3. `srednia` - oblicza średnią z dwóch liczb,############################################################
 def srednia(x: int or float, y: int or float):
     """Funkcja oblicza średnią z dwóch liczb.
-    :param x
-    :param y
+    :param x:
+    :param y:
     :return:
     """
     if type(x) is not float and type(x) is not int:
@@ -117,7 +117,7 @@ def test_liczb_odpowiednich():
 # 4.`pole_kola` - oblicza pole koła o podanym promieniu (jeden parametr)####################################
 def pole_kola(promien: int or float) -> int or float:
     """Funkcja oblicza pole koła z użyciem podanej wartosci promienia
-    :param promien
+    :param promien:
     :return:
     """
 
@@ -152,9 +152,9 @@ def test_innych_typow1():
 def bmi(wzrost: int or float, waga: int or float) -> float:
     """Funkcja oblicza współczynnik BMI dla podanych parametrów:
      wzrostu w metrach i wagi w kg
-     :param wzrost
-     :param waga
-     :return
+     :param wzrost:
+     :param waga:
+     :return:
      """
     if (type(wzrost) is not int and type(wzrost) is not float) or (type(waga) is not int
                                                                    and type(waga) is not float) or (wzrost <= 0 or waga
@@ -192,10 +192,10 @@ def test_dobrychliczb():
 # 6. `pole_trojkata` - z trzema parametrami - oblicza pole trójkąta o podanych bokach z wzoru Herona.#################
 def pole_trojkata(a: int or float, b: int or float, c: int or float) -> int or float:
     """Funkcja oblicza pole trójkąta ze wzoru Herona z podanych trzech parametrów
-    :param a
-    :param b
-    :param c
-    :return
+    :param a:
+    :param b:
+    :param c:
+    :return:
     """
     if not (isinstance(a, int) or isinstance(a, float)) or not (isinstance(b, int) or isinstance(b, float)) or not \
             (isinstance(c, int) or isinstance(c, float)):
@@ -238,6 +238,11 @@ def test_nieliczb6():
 
 # 7. `kilometry_na_mile` - przelicza odległość wyrażoną w kilometrach na mile #########################################
 def kilometry_na_mile(kilometry: int or float) -> int or float:
+    """
+    Funkcja przelciza odleglość wyrażoną w kilometrach na mile.
+    :param kilometry:
+    :return:
+    """
     if not (isinstance(kilometry, int) or isinstance(kilometry, float)):
         raise TypeError("Wartość kilometrów musi być intem lub loatem.")
     if kilometry <= 0:
@@ -266,6 +271,11 @@ def test_kilometry_mniejsze_rowne_zero():
 
 # # 8. `mile_na_kilometry` - przelicza odległość wyrażoną w milach na kilometry #####################################
 def mile_na_km(wartosc_mil: int or float) -> int or float:
+    """
+    Fukncja przelciza mile na kilometry.
+    :param wartosc_mil:
+    :return:
+    """
     if not (isinstance(wartosc_mil, int) or isinstance(wartosc_mil, float)):
         raise TypeError("wartość musi być intem lub floatem")
     if wartosc_mil <= 0:
