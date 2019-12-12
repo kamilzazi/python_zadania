@@ -32,8 +32,8 @@ def opakowywacz_miesiaca(jaki_miesiac, wynik):
     return f'{jaki_miesiac.capitalize()} ma {wynik} dni'
 
 
-miesiac_uzytkownika = input('Podaj miesiąc: ')
-print(opakowywacz_miesiaca(miesiac_uzytkownika, ile_dni_ma_miesiac(miesiac_uzytkownika)))
+# miesiac_uzytkownika = input('Podaj miesiąc: ')
+# print(opakowywacz_miesiaca(miesiac_uzytkownika, ile_dni_ma_miesiac(miesiac_uzytkownika)))
 
 
 # **Wersja B (trudniejsza)**
@@ -41,6 +41,13 @@ print(opakowywacz_miesiaca(miesiac_uzytkownika, ile_dni_ma_miesiac(miesiac_uzytk
 
 
 def ile_dni(miesiac_uzytkownika: str) -> int:
+    """
+    Funkcja prosi użytkownika o wpisanie miesiąca, a następnie zwraca liczbę jego dni.
+    Jeśli użytkownik wpisze "luty" funkcja prosi o podanie roku i na tej podstawie sprawdza czy rok jest przestępny, a
+    następnie zwraca liczbę dni miesiąca luty.
+    :param miesiac_uzytkownika:
+    :return:
+    """
     miesiac_uzytkownika_male_litery = miesiac_uzytkownika.lower()
     miesiace = {'styczen': 31, 'luty': None, 'marzec': 31, 'kwiecien': 30, 'maj': 31, 'czerwiec': 30, 'lipiec': 31,
                 'sierpien': 31, 'wrzesien': 30, 'pazdziernik': 31, 'listopad': 30, 'grudzien': 31}
@@ -70,12 +77,10 @@ def wrapper(mies):
         print(f'{mies["miesiac1"].capitalize()} w {mies["w_ktorym_roku"]} roku ma {mies["dni"]} dni.')
 
 
-miesiac_uzytkownika = input("Podaj miesiac: ")
-wrapper(ile_dni(miesiac_uzytkownika))
+# miesiac_uzytkownika = input("Podaj miesiac: ")
+# wrapper(ile_dni(miesiac_uzytkownika))
 
 
 def test_nie_miesiecy():
     with pytest.raises(ValueError):
         ile_dni('niemiesiac')
-
-
