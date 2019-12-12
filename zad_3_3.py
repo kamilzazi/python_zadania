@@ -154,6 +154,13 @@ print(wypisz_wieksze(liczby, 25))
 # - `pierwsza_wieksza(liczby, x)` – zwraca (`return`) pierwszą znalezioną w `liczby` liczbę większą od `x`;
 #     zwraca `None`, jeśli takiej liczby tam nie ma
 def pierwsza_wieksza(liczby: list, x: int or float) -> int or float:
+    """
+    zwraca pierwszą znalezioną liczbę w liście podanej przez uzytkownika większą od x. Zwraca None, jeśli takiej liczby
+    nie ma
+    :param liczby:
+    :param x:
+    :return:
+    """
     for i in liczby:
         if i <= x:
             continue
@@ -163,18 +170,80 @@ def pierwsza_wieksza(liczby: list, x: int or float) -> int or float:
 liczby = [12, 64, 27, 96, 345, 133, 11, 9, 6, 2345, 6]
 print('#' * 60)
 print(pierwsza_wieksza(liczby, 200))
-print(pierwsza_wieksza(liczby, 2500))asw3222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222q1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222`]\
-
-
-
-
-
+print(pierwsza_wieksza(liczby, 2500))
 
 
 # - `suma_wiekszych(liczby, x)` – zwraca (`return`) sumę liczb z listy `liczby`, które są większe niż `x`
+def suma_wiekszych(liczby: list, x: int or float) -> int or float:
+    """
+    Zwraca sumę liczb z listy podanej przez użytkownika, które są większe niż 'x'
+    :param liczby:
+    :param x:
+    :return:
+    """
+    nowa_lista = []
+    for i in liczby:
+        if i > x:
+            nowa_lista.append(i)
+    return sum(nowa_lista)
+
+
+liczby = [10, 80, 30, 40]
+print(suma_wiekszych(liczby, 12))
+
+
 # - `ile_wiekszych(liczby, x)` – liczy ile elementów listy `liczby` jest większych od liczby `x`
+def ile_wiekszych(liczby: list, x: int) -> int:
+    """
+    Zwraca liczbę elementów listy większych od 'x'
+    :param liczby:
+    :param x:
+    :return:
+    """
+    nowa_lista = []
+    for i in liczby:
+        if i > x:
+            nowa_lista.append(i)
+    return len(nowa_lista)
+
+
+liczby = [10, 80, 30, 40, 80, 45, 55, 100, 15]
+print(ile_wiekszych(liczby, 45))
+
+
 # - `wypisz_podzielne(tab, x)` – wypisuje (`print`) wszystkie te liczby z listy `liczby`, które są podzielne przez `x`
+def wypisz_podzielne(tab: list, x: int) -> list:
+    nowa_lista = []
+    for i in tab:
+        if i % x == 0:
+            nowa_lista.append(i)
+    return nowa_lista
+
+
+liczby = [10, 80, 30, 40, 80, 45, 55, 100, 15]
+print(wypisz_podzielne(liczby, 2))
+
+
 # - `pierwsza_podzielna(liczby, x)` – zwraca (`return`) pierwszą znalezioną w `liczby` liczbę podzielną przez `x`;
-#     zwraca `None`, jeśli takiej liczby tam nie ma
+def pierwsza_podzielna(liczby: list, x: int) -> int:
+    """
+    Funkcja zwraca pierwszą liczbę z listy podzielną przez 'x'. Zwraca `None`, jeśli takiej liczby tam nie ma.
+    :param liczby:
+    :param x:
+    :return:
+    """
+    nowa_lista = []
+    for i in liczby:
+        if i % x != 0:
+            continue
+        return i
+
+
+liczby = [10, 80, 30, 40, 80, 45, 55, 100, 15]
+print(pierwsza_podzielna(liczby, 4))
+
+
 # - `znajdz_wspolny(liczby1, liczby2)` – zwraca element (liczbę), który występuje zarówno w liście `liczby1`,
 #     jak i `liczby2`; zwraca `None`, jeśli takiego elementu nie ma
+# def znajdz_wspolny(liczby1: list, liczby2: list) -> int:
+#     i
