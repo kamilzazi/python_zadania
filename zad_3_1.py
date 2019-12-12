@@ -3,7 +3,8 @@
 1. `stopy_na_metry` - przelicza odległość wyrażoną w stopach na metry,
 2. `max` - zwraca większą z dwóch liczb,
 3. `srednia` - oblicza średnią z dwóch liczb,
-4. `pole_kola` - oblicza pole koła o podanym promieniu (jeden parametr) #podpowiedź: wartość PI jest dostępna jako `Math.PI`
+4. `pole_kola` - oblicza pole koła o podanym promieniu (jeden parametr)
+    #podpowiedź: wartość PI jest dostępna jako `Math.PI`
 5. `bmi` - oblicza współczynnik BMI dla podanych dwóch parametrów: wzrostu w metrach i wagi w kg.
 6. `pole_trojkata` - z trzema parametrami - oblicza pole trójkąta o podanych bokach z wzoru Herona.
 7. `kilometry_na_mile` - przelicza odległość wyrażoną w kilometrach na mile
@@ -129,6 +130,7 @@ def pole_kola(promien: int or float) -> int or float:
 
 pole_kola(2)
 pole_kola(2.5)
+
 
 def test_innych_typow_liczb_niedodatnich():
     with pytest.raises(ValueError):
@@ -267,14 +269,16 @@ def mile_na_km(wartosc_mil: int or float) -> int or float:
     if wartosc_mil <= 0:
         raise ValueError("Wartosc musi byc wieksza od 0")
     wartosc_km = 1.61 * wartosc_mil
+    print(f'Mile: {wartosc_mil}. Kilometry: {wartosc_km}')
     return wartosc_km
 
-print(mile_na_km(51))
+
+mile_na_km(51)
+
 
 def test_zwykle_liczby():
-    assert mile_na_km(1) == 1.61
     assert mile_na_km(11) == 17.71
-
+    assert mile_na_km(1) == 1.61
 
 def test_liczby_niedodatnie_mile():
     with pytest.raises(ValueError):
@@ -286,3 +290,10 @@ def test_inne_liczby_mile():
     with pytest.raises(TypeError):
         mile_na_km('a')
         mile_na_km((1, 2, 3), 4, 5)
+
+
+print("#" * 60)###############################################################################################
+
+
+# wartosc_mil_na_km = float(input("Podaj wartość mil jaką chcesz przeliczyć na kilometry: "))
+# mile_na_km(wartosc_mil_na_km)
