@@ -41,10 +41,10 @@ def ile_dni(miesiac_uzytkownika: str) -> int:
         ktory_rok = int(input('O luty w którym roku Ci chodzi?: '))
         if ktory_rok % 4 == 0 and ktory_rok % 100 != 0 or ktory_rok % 400 == 0:
             # https://pl.wikipedia.org/wiki/Rok_przest%C4%99pny
-            slownik_miesiac = {'miesiac1': 'luty', 'dni': 29, 'w_ktorym_roku': ktory_rok}
+            slownik_miesiac = {'miesiac1': miesiac_uzytkownika_male_litery, 'dni': 29, 'w_ktorym_roku': ktory_rok}
             return slownik_miesiac
         else:
-            slownik_miesiac = {'miesiac1': 'luty', 'dni': 28, 'w_ktorym_roku': ktory_rok}
+            slownik_miesiac = {'miesiac1': miesiac_uzytkownika_male_litery, 'dni': 28, 'w_ktorym_roku': ktory_rok}
             return slownik_miesiac
     else:
         for miesiac in miesiace:
