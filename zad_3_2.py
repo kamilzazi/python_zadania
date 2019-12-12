@@ -11,6 +11,9 @@ Nie przyjmuj się lutym - zwracaj zawsze jedną wartość.
 Jeżeli użytkownik poda luty - zapytaj go o rok. Na tej podstawie policz czy w tym roku luty był przestępny czy nie. """
 
 
+import pytest
+
+
 # # **Wersja A**
 # def ile_dni_ma_miesiac(jaki_miesiac: str) -> int:
 #     miesiace = {'styczen': 31, 'luty': 28, 'marzec': 31, 'kwiecien': 30, 'maj': 31, 'czerwiec': 30, 'lipiec': 31,
@@ -35,22 +38,25 @@ Jeżeli użytkownik poda luty - zapytaj go o rok. Na tej podstawie policz czy w 
 
 def ile_dni(miesiac_uzytkownika: str) -> int:
     miesiac_uzytkownika_male_litery = miesiac_uzytkownika.lower()
-    miesiace = {'styczen': 31, 'marzec': 31, 'kwiecien': 30, 'maj': 31, 'czerwiec': 30, 'lipiec': 31,
+    miesiace = {'styczen': 31, 'luty': None, 'marzec': 31, 'kwiecien': 30, 'maj': 31, 'czerwiec': 30, 'lipiec': 31,
                 'sierpien': 31, 'wrzesien': 30, 'pazdziernik': 31, 'listopad': 30, 'grudzien': 31}
-    if miesiac_uzytkownika_male_litery == 'luty':
-        ktory_rok = int(input('O luty w którym roku Ci chodzi?: '))
-        if ktory_rok % 4 == 0 and ktory_rok % 100 != 0 or ktory_rok % 400 == 0:
-            # https://pl.wikipedia.org/wiki/Rok_przest%C4%99pny
-            slownik_miesiac = {'miesiac1': miesiac_uzytkownika_male_litery, 'dni': 29, 'w_ktorym_roku': ktory_rok}
-            return slownik_miesiac
-        else:
-            slownik_miesiac = {'miesiac1': miesiac_uzytkownika_male_litery, 'dni': 28, 'w_ktorym_roku': ktory_rok}
-            return slownik_miesiac
+    if miesiac_uzytkownika_male_litery not in miesiace.keys():
+        raise ValueError("Nie podałeś miesiąca.")
     else:
-        for miesiac in miesiace:
-            if miesiac == miesiac_uzytkownika_male_litery:
-                slownik_miesiac = {'miesiac1': miesiac, 'dni': miesiace[miesiac]}
+        if miesiac_uzytkownika_male_litery == 'luty':
+            ktory_rok = int(input('O luty w którym roku Ci chodzi?: '))
+            if ktory_rok % 4 == 0 and ktory_rok % 100 != 0 or ktory_rok % 400 == 0:
+                # https://pl.wikipedia.org/wiki/Rok_przest%C4%99pny
+                slownik_miesiac = {'miesiac1': miesiac_uzytkownika_male_litery, 'dni': 29, 'w_ktorym_roku': ktory_rok}
                 return slownik_miesiac
+            else:
+                slownik_miesiac = {'miesiac1': miesiac_uzytkownika_male_litery, 'dni': 28, 'w_ktorym_roku': ktory_rok}
+                return slownik_miesiac
+        else:
+            for miesiac in miesiace:
+                if miesiac == miesiac_uzytkownika_male_litery:
+                    slownik_miesiac = {'miesiac1': miesiac, 'dni': miesiace[miesiac]}
+                    return slownik_miesiac
 
 
 def wrapper(mies):
@@ -62,3 +68,9 @@ def wrapper(mies):
 
 miesiac_uzytkownika = input("Podaj miesiac: ")
 wrapper(ile_dni(miesiac_uzytkownika))
+
+def test_nie_miesiecy():
+    with pytest.raises(ValueError):
+        ile_dni('niemiesiac')
+
+
