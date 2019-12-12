@@ -9,7 +9,7 @@
 6. `pole_trojkata` - z trzema parametrami - oblicza pole trójkąta o podanych bokach z wzoru Herona.
 7. `kilometry_na_mile` - przelicza odległość wyrażoną w kilometrach na mile
 8. `mile_na_kilometry` - przelicza odległość wyrażoną w milach na kilometry
-
+Dla wybranych napisz też interaktywne programy, które pytają użytkownika o dane i wypisują wynik.
 """
 
 import math
@@ -149,14 +149,15 @@ def test_innych_typow1():
 
 # `bmi` - oblicza współczynnik BMI dla podanych dwóch parametrów: wzrostu w metrach i wagi w kg.#####################
 def bmi(wzrost: int or float, waga: int or float) -> float:
-    """Funckaj oblciza współczynnik BMI dl apodanych parametrów:
+    """Funkcja oblicza współczynnik BMI dla podanych parametrów:
      wzrostu w metrach i wagi w kg
      :param wzrost
      :param waga
      :return
      """
-    if (type(wzrost) is not int and type(wzrost) is not float) or (type(waga) is not int \
-            and type(waga) is not float) or (wzrost <= 0 or waga <= 0):
+    if (type(wzrost) is not int and type(wzrost) is not float) or (type(waga) is not int
+                                                                   and type(waga) is not float) or (wzrost <= 0 or waga
+                                                                                                    <= 0):
         raise ValueError("wzrost i waga muszą być większe od 0 i być intem lub floatem")
     wynik = round(waga / wzrost ** 2, 1)
     return wynik
@@ -280,6 +281,7 @@ def test_zwykle_liczby():
     assert mile_na_km(11) == 17.71
     assert mile_na_km(1) == 1.61
 
+
 def test_liczby_niedodatnie_mile():
     with pytest.raises(ValueError):
         mile_na_km(-8)
@@ -292,8 +294,16 @@ def test_inne_liczby_mile():
         mile_na_km((1, 2, 3), 4, 5)
 
 
-print("#" * 60)###############################################################################################
+print("#" * 60)  # ##############################################################################################
 
 
 # wartosc_mil_na_km = float(input("Podaj wartość mil jaką chcesz przeliczyć na kilometry: "))
 # mile_na_km(wartosc_mil_na_km)
+
+
+twoja_waga = float(input('Podaj wagę [kg]: '))
+twoj_wzrost = float(input('Podaj wzrost [m]: '))
+x = bmi(twoj_wzrost, twoja_waga)
+print(f'Twoje BMI wynosi {x}')
+
+
