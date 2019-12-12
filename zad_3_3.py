@@ -245,5 +245,14 @@ print(pierwsza_podzielna(liczby, 4))
 
 # - `znajdz_wspolny(liczby1, liczby2)` – zwraca element (liczbę), który występuje zarówno w liście `liczby1`,
 #     jak i `liczby2`; zwraca `None`, jeśli takiego elementu nie ma
-# def znajdz_wspolny(liczby1: list, liczby2: list) -> int:
-#     i
+def znajdz_wspolny(liczby1: list, liczby2: list) -> int:
+    for i in liczby1:
+        for i in liczby2:
+            if i in liczby1 and i in liczby2:
+                return i
+
+
+print('#' * 60)
+liczby1 = [10, 80, 31, 40, 80, 46, 55, 100, 15]
+liczby2 = [11, 81, 30, 41, 81, 46, 56, 101, 16]
+print(znajdz_wspolny(liczby1, liczby2))
