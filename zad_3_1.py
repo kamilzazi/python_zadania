@@ -18,8 +18,9 @@ import pytest
 
 # 1. `stopy_na_metry` - przelicza odległość wyrażoną w stopach na metry,############################################
 def stopy_na_metry(wartosc_w_stopach: int or float) -> int or float:
-    """Funkcka przelcza odległość wyrażoną w stopach na metry.
-    :param wartosc_w_stopach
+    """
+    Funkcka przelcza odległość wyrażoną w stopach na metry.
+    :param wartosc_w_stopach:
     :return:
     """
     if type(wartosc_w_stopach) is not float and type(wartosc_w_stopach) is not int or wartosc_w_stopach < 0:

@@ -16,6 +16,10 @@ import pytest
 
 # # **Wersja A**
 def ile_dni_ma_miesiac(jaki_miesiac: str) -> int:
+    """Funkcja zwraca liczbę dni dla podanego miesiąca
+    :param jaki_miesiac
+    :return
+    """
     miesiace = {'styczen': 31, 'luty': 28, 'marzec': 31, 'kwiecien': 30, 'maj': 31, 'czerwiec': 30, 'lipiec': 31,
                 'sierpien': 31, 'wrzesien': 30, 'pazdziernik': 31, 'listopad': 30, 'grudzien': 31}
     for miesiac in miesiace:
