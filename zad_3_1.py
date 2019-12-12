@@ -1,5 +1,5 @@
-"""Stwórz następujące funkcje. Niech każda z nich przyjmuje w argument do przeliczenia i zwraca przeliczoną wartość.
-​
+""" Zadanie 3.1 Funkcje liczbowe
+Stwórz następujące funkcje. Niech każda z nich przyjmuje w argument do przeliczenia i zwraca przeliczoną wartość.
 1. `stopy_na_metry` - przelicza odległość wyrażoną w stopach na metry,
 2. `max` - zwraca większą z dwóch liczb,
 3. `srednia` - oblicza średnią z dwóch liczb,
