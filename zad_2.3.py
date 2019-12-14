@@ -16,7 +16,7 @@ liczby = []
 print('Wpisz liczby. Jeśli chcesz zakończyć wpisywanie naciśnij dowolny przycisk różny niż cyfra.')
 while True :
     x = input('Podaj liczbę: ')
-    if x.isdigit() == True:
+    if x.isdigit():
         liczby.append(int(x))
     else:
         print(f'Wprowadziłeś liczby: {liczby}')
