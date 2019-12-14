@@ -10,7 +10,7 @@ Np. dla parametru 3 powinno się wypisać:
 """
 
 
-# licznik = int(0)
+# licznik = 0
 # x = int(input('Podaj liczbę całkowitą: '))
 # gwiazda = '* '
 # gwiazdka = '* '
@@ -25,7 +25,7 @@ Np. dla parametru 3 powinno się wypisać:
 
 
 
-licznik = int(0)
+licznik = 0
 x = int(input('Podaj liczbę całkowitą: '))
 gwiazda = '* '
 gwiazdka = '* '
