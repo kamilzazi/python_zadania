@@ -20,8 +20,7 @@ def crazy_case(napis: str) ->str:
     for i in range(0, len(napis)):
         if i % 2 == 0:
             litera = napis[i]
-            litera1 = litera.upper()
-            nowy_napis += litera1
+            nowy_napis += litera.upper()
         else:
             nowy_napis += napis[i]
     return nowy_napis
