@@ -58,12 +58,15 @@ class Element():
         return self.tekst
 
     def render(self):
-        return self.tekst, self.tekst1
+        if self.tekst1 == None:
+            return self.tekst
+        else:
+            return self.tekst, self.tekst1
 
 
 class HeaderElement(Element):
     def render(self):
-        tekst, tekst1 = super().render()
+        tekst = super().render()
         return tekst + "\n" + "=" * len(tekst)
 
 
@@ -89,8 +92,10 @@ class Document:
 
 
 doc = Document()
-doc.add_element(HeaderElement("Kamil Zazula, ul. Zielona 20, 22-680 Lubycza Królewska").render())
-doc.add_element(HeaderElement("Kamil Zazula, ul. Popiełuszki 22/12, 35-328 Rzeszów").render())
+doc.add_element(HeaderElement("Kamil Zazula, Lubycza Królewska").render())
+doc.add_element(HeaderElement("Kamil Zazula, Rzeszów").render())
 doc.add_element(LinkElement("ABC", "abc.com").render())
 doc.add_element(LinkElement("Nasza Klasa", "naszaklasa.pl").render())
+doc.add_element(Element("Kamil Zazula"))
+doc.add_element(Element("Kamil Zazula").render())
 print(doc.rander())
