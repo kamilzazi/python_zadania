@@ -1,15 +1,14 @@
-""" Zadanie 3.1 Funkcje liczbowe
-Stwórz następujące funkcje. Niech każda z nich przyjmuje w argument do przeliczenia i zwraca przeliczoną wartość.
+"""Stwórz następujące funkcje. Niech każda z nich przyjmuje w argument do przeliczenia i zwraca przeliczoną wartość.
+​
 1. `stopy_na_metry` - przelicza odległość wyrażoną w stopach na metry,
 2. `max` - zwraca większą z dwóch liczb,
 3. `srednia` - oblicza średnią z dwóch liczb,
-4. `pole_kola` - oblicza pole koła o podanym promieniu (jeden parametr)
-    #podpowiedź: wartość PI jest dostępna jako `Math.PI`
+4. `pole_kola` - oblicza pole koła o podanym promieniu (jeden parametr) #podpowiedź: wartość PI jest dostępna jako `Math.PI`
 5. `bmi` - oblicza współczynnik BMI dla podanych dwóch parametrów: wzrostu w metrach i wagi w kg.
 6. `pole_trojkata` - z trzema parametrami - oblicza pole trójkąta o podanych bokach z wzoru Herona.
 7. `kilometry_na_mile` - przelicza odległość wyrażoną w kilometrach na mile
 8. `mile_na_kilometry` - przelicza odległość wyrażoną w milach na kilometry
-Dla wybranych napisz też interaktywne programy, które pytają użytkownika o dane i wypisują wynik.
+
 """
 
 import math
@@ -18,9 +17,8 @@ import pytest
 
 # 1. `stopy_na_metry` - przelicza odległość wyrażoną w stopach na metry,############################################
 def stopy_na_metry(wartosc_w_stopach: int or float) -> int or float:
-    """
-    Funkcka przelcza odległość wyrażoną w stopach na metry.
-    :param wartosc_w_stopach:
+    """Funkcka przelcza odległość wyrażoną w stopach na metry.
+    :param wartosc_w_stopach
     :return:
     """
     if type(wartosc_w_stopach) is not float and type(wartosc_w_stopach) is not int or wartosc_w_stopach < 0:
@@ -50,8 +48,8 @@ def test_liczb_nieujemnych():
 # 2. `max` - zwraca większą z dwóch liczb,###################################################################
 def maks(liczba1: int or float, liczba2: int or float) -> int or float:
     """Zwraca większą z dwóch liczb
-    :param liczba1:
-    :param liczba2:
+    :param liczba1
+    :param liczba2
     :return:
     """
     if type(liczba1) is not int and type(liczba1) is not float \
@@ -88,8 +86,8 @@ def test_liczb_prawidlowych():
 # 3. `srednia` - oblicza średnią z dwóch liczb,############################################################
 def srednia(x: int or float, y: int or float):
     """Funkcja oblicza średnią z dwóch liczb.
-    :param x:
-    :param y:
+    :param x
+    :param y
     :return:
     """
     if type(x) is not float and type(x) is not int:
@@ -117,7 +115,7 @@ def test_liczb_odpowiednich():
 # 4.`pole_kola` - oblicza pole koła o podanym promieniu (jeden parametr)####################################
 def pole_kola(promien: int or float) -> int or float:
     """Funkcja oblicza pole koła z użyciem podanej wartosci promienia
-    :param promien:
+    :param promien
     :return:
     """
 
@@ -131,7 +129,6 @@ def pole_kola(promien: int or float) -> int or float:
 
 pole_kola(2)
 pole_kola(2.5)
-
 
 def test_innych_typow_liczb_niedodatnich():
     with pytest.raises(ValueError):
@@ -150,15 +147,14 @@ def test_innych_typow1():
 
 # `bmi` - oblicza współczynnik BMI dla podanych dwóch parametrów: wzrostu w metrach i wagi w kg.#####################
 def bmi(wzrost: int or float, waga: int or float) -> float:
-    """Funkcja oblicza współczynnik BMI dla podanych parametrów:
+    """Funckaj oblciza współczynnik BMI dl apodanych parametrów:
      wzrostu w metrach i wagi w kg
-     :param wzrost:
-     :param waga:
-     :return:
+     :param wzrost
+     :param waga
+     :return
      """
-    if (type(wzrost) is not int and type(wzrost) is not float) or (type(waga) is not int
-                                                                   and type(waga) is not float) or (wzrost <= 0 or waga
-                                                                                                    <= 0):
+    if (type(wzrost) is not int and type(wzrost) is not float) or (type(waga) is not int \
+            and type(waga) is not float) or (wzrost <= 0 or waga <= 0):
         raise ValueError("wzrost i waga muszą być większe od 0 i być intem lub floatem")
     wynik = round(waga / wzrost ** 2, 1)
     return wynik
@@ -192,10 +188,10 @@ def test_dobrychliczb():
 # 6. `pole_trojkata` - z trzema parametrami - oblicza pole trójkąta o podanych bokach z wzoru Herona.#################
 def pole_trojkata(a: int or float, b: int or float, c: int or float) -> int or float:
     """Funkcja oblicza pole trójkąta ze wzoru Herona z podanych trzech parametrów
-    :param a:
-    :param b:
-    :param c:
-    :return:
+    :param a
+    :param b
+    :param c
+    :return
     """
     if not (isinstance(a, int) or isinstance(a, float)) or not (isinstance(b, int) or isinstance(b, float)) or not \
             (isinstance(c, int) or isinstance(c, float)):
@@ -238,11 +234,6 @@ def test_nieliczb6():
 
 # 7. `kilometry_na_mile` - przelicza odległość wyrażoną w kilometrach na mile #########################################
 def kilometry_na_mile(kilometry: int or float) -> int or float:
-    """
-    Funkcja przelciza odleglość wyrażoną w kilometrach na mile.
-    :param kilometry:
-    :return:
-    """
     if not (isinstance(kilometry, int) or isinstance(kilometry, float)):
         raise TypeError("Wartość kilometrów musi być intem lub loatem.")
     if kilometry <= 0:
@@ -271,11 +262,6 @@ def test_kilometry_mniejsze_rowne_zero():
 
 # # 8. `mile_na_kilometry` - przelicza odległość wyrażoną w milach na kilometry #####################################
 def mile_na_km(wartosc_mil: int or float) -> int or float:
-    """
-    Fukncja przelciza mile na kilometry.
-    :param wartosc_mil:
-    :return:
-    """
     if not (isinstance(wartosc_mil, int) or isinstance(wartosc_mil, float)):
         raise TypeError("wartość musi być intem lub floatem")
     if wartosc_mil <= 0:
@@ -286,11 +272,12 @@ def mile_na_km(wartosc_mil: int or float) -> int or float:
 
 
 mile_na_km(51)
+mile_na_km(1)
 
 
-def test_zwykle_liczby():
-    assert mile_na_km(11) == 17.71
+def test_zwykle_liczby21():
     assert mile_na_km(1) == 1.61
+    assert mile_na_km(11) == 17.71
 
 
 def test_liczby_niedodatnie_mile():
@@ -304,17 +291,8 @@ def test_inne_liczby_mile():
         mile_na_km('a')
         mile_na_km((1, 2, 3), 4, 5)
 
-
-print("#" * 60)  # ##############################################################################################
+print("#" * 60)###############################################################################################
 
 
 # wartosc_mil_na_km = float(input("Podaj wartość mil jaką chcesz przeliczyć na kilometry: "))
 # mile_na_km(wartosc_mil_na_km)
-
-
-twoja_waga = float(input('Podaj wagę [kg]: '))
-twoj_wzrost = float(input('Podaj wzrost [m]: '))
-x = bmi(twoj_wzrost, twoja_waga)
-print(f'Twoje BMI wynosi {x}')
-
-
