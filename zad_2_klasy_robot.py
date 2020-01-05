@@ -9,7 +9,6 @@ Znaczenie instrukcji:
     - Prawo - obraca robota o 90 stopni w prawo
     - Lewo - obraca robota o 90 stopni w lewo
 Wywołanie metody wykonaj() powinno przemieścić robota zgodnie z przekazanymi instrukcjami.
-
 Przykład:
 początkowe położenie robota: (0, 0), zwrot: N
 ciąg instrukcji: NNPNLNPP
