@@ -267,11 +267,15 @@ def mile_na_km(wartosc_mil: int or float) -> int or float:
     if wartosc_mil <= 0:
         raise ValueError("Wartosc musi byc wieksza od 0")
     wartosc_km = 1.61 * wartosc_mil
+    print(f'Mile: {wartosc_mil}. Kilometry: {wartosc_km}')
     return wartosc_km
 
-print(mile_na_km(51))
 
-def test_zwykle_liczby():
+mile_na_km(51)
+mile_na_km(1)
+
+
+def test_zwykle_liczby21():
     assert mile_na_km(1) == 1.61
     assert mile_na_km(11) == 17.71
 
@@ -286,3 +290,9 @@ def test_inne_liczby_mile():
     with pytest.raises(TypeError):
         mile_na_km('a')
         mile_na_km((1, 2, 3), 4, 5)
+
+print("#" * 60)###############################################################################################
+
+
+# wartosc_mil_na_km = float(input("Podaj wartość mil jaką chcesz przeliczyć na kilometry: "))
+# mile_na_km(wartosc_mil_na_km)
