@@ -13,3 +13,48 @@ Przykład:
 początkowe położenie robota: (0, 0), zwrot: N
 ciąg instrukcji: NNPNLNPP
 końcowe położenie robota: (1, 3), zwrot: S"""
+
+
+class Robot:
+    def __init__(self, instrukcje):
+        self.instrukcje = instrukcje
+        self.zwrot = 'N'
+        self.x = 0
+        self.y = 0
+
+    def wykonaj(self):
+        for litera in self.instrukcje:
+            if litera in 'LP':
+                if litera == 'P':
+                    if self.zwrot == 'N':
+                        self.zwrot = "E"
+                    elif self.zwrot == 'E':
+                        self.zwrot = "S"
+                    elif self.zwrot == 'S':
+                        self.zwrot = "W"
+                    elif self.zwrot == 'W':
+                        self.zwrot = "N"
+                elif litera == 'L':
+                    if self.zwrot == 'N':
+                        self.zwrot = "W"
+                    elif self.zwrot == 'W':
+                        self.zwrot = "S"
+                    elif self.zwrot == 'S':
+                        self.zwrot = "E"
+                    elif self.zwrot == 'E':
+                        self.zwrot = "N"
+            elif litera == 'N':
+                if self.zwrot == "N":
+                    self.y += 1
+                if self.zwrot == "E":
+                    self.x += 1
+                if self.zwrot == "S":
+                    self.y -= 1
+                if self.zwrot == "W":
+                    self.x -= 1
+        return f'Położenie robota: {self.x, self.y}. Zwrot robota: {self.zwrot}.'
+
+
+x = Robot("PNNLNPNN")
+y = x.wykonaj()
+print(y)
