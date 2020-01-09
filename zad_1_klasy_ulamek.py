@@ -24,16 +24,12 @@ from fractions import Fraction
 
 
 class Ulamek(Fraction):
-    def __init__(self, l, m):
-        self.l = l
-        self.m = m
+    def __init__(self, licz, mian):
+        self.licz = licz
+        self.mian = mian
 
     def ulamek(self):
-        return Fraction(self.l, self.m)
-
-    # def __iadd__(self, other):
-    #     x += Fraction(self.x, self.y)
-    #     return
+        return Fraction(self.licz, self.mian)
 
 
 x = Ulamek(2, 3)
