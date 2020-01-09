@@ -10,15 +10,6 @@
         (tzn. 1/4 + 1/4 powinno dać w wyniku ułamek 1/2 a nie 2/4)
 """
 
-# from fractions import Fraction
-# a = Fraction(1, 2)
-# print(a)
-# print(type(a))
-
-# import fractions
-# for n, d in [ (1, 2), (2, 4), (3, 6) ]:
-#     f = fractions.Fraction(n, d)
-#     print('%s/%s = %s' % (n, d, f))
 
 from fractions import Fraction
 
