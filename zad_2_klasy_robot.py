@@ -16,14 +16,16 @@ końcowe położenie robota: (1, 3), zwrot: S"""
 
 
 class Robot:
-    def __init__(self, instrukcje):
-        self.instrukcje = instrukcje
+    def __init__(self):
         self.zwrot = 'N'
         self.x = 0
         self.y = 0
 
-    def wykonaj(self):
-        for litera in self.instrukcje:
+    def __str__(self):
+        return f'Polozenie robota: {self.x, self.y}. Zwrot robota: {self.zwrot}'
+
+    def wykonaj(self, instrukcje):
+        for litera in instrukcje:
             if litera in 'LP':
                 if litera == 'P':
                     if self.zwrot == 'N':
@@ -52,9 +54,10 @@ class Robot:
                     self.y -= 1
                 if self.zwrot == "W":
                     self.x -= 1
-        return f'Położenie robota: {self.x, self.y}. Zwrot robota: {self.zwrot}.'
+        # return f'Położenie robota: {self.x, self.y}. Zwrot robota: {self.zwrot}.'
+        return self.x, self.y, self.zwrot
 
-
-x = Robot("PNNLNPNN")
-y = x.wykonaj()
-print(y)
+x = Robot()
+print(x)
+y = x.wykonaj("PNNLNPNN")
+print(f'Położenie robota: {y[0], y[1]}. Zwrot robota: {y[2]}')
